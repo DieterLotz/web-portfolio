@@ -21,7 +21,7 @@ export const menuOpenIcon = (
     viewBox="0 0 24 24"
     strokeWidth="1.5"
     stroke="currentColor"
-    className="w-14 h-14 stroke-white"
+    className="w-10 h-10 stroke-white"
   >
     <path
       strokeLinecap="round"
@@ -39,7 +39,7 @@ export const menuCloseIcon = (
     viewBox="0 0 24 24"
     strokeWidth="1.5"
     stroke="currentColor"
-    className="w-14 h-14 stroke-white"
+    className="w-10 h-10 stroke-white"
   >
     <path
       strokeLinecap="round"

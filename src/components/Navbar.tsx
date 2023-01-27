@@ -29,7 +29,7 @@ const Navbar = () => {
             className="flex gap-2 items-center w-52 h-6 text-slate-300 text-base line hover:cursor-pointer"
             onClick={(e) => onLinkClickHandler("/", e)}
           >
-            <pre>Dieter Lotz</pre>
+            <pre>Dieter Lötz</pre>
             {codeBracketIcon}
           </button>
           <nav className="hidden md:flex md:justify-end md:items-center md:gap-7 md:w-full">
