@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="grow w-full pt-10 px-5 animate-fadeFromLeft300 transition md:px-28 md:pt-24"
+      className="snap-always snap-start grow min-w-full pt-10 px-5 animate-fadeFromLeft300 transition md:px-28 md:pt-24"
     >
       <div className="grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
         {/* First Grid item */}
