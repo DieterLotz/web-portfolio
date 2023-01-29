@@ -1,30 +1,25 @@
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { ABOUT_ROUTE, HERO_ROUTE } from "../../helpers/router-routes";
+import { locationIcon } from "../../helpers/svg-helper";
+import { Section } from "../Section";
+
 const Hero = () => {
-  const locationIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className="w-4 h-4 stroke-slate-400"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-      />
-    </svg>
-  );
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    sectionRef?.current?.classList.remove("animate-fadeFromLeft300");
+    void sectionRef?.current?.offsetWidth;
+    sectionRef?.current?.classList.add("animate-fadeFromLeft300");
+  }, [sectionRef]);
 
   return (
-    <section
+    <Section
+      ref={sectionRef}
       id="hero"
-      className="snap-always snap-start grow min-w-full pt-10 px-5 animate-fadeFromLeft300 transition md:px-28 md:pt-24"
+      nextRoute={ABOUT_ROUTE}
+      prevRoute={HERO_ROUTE}
+      className="snap-always snap-start grow min-w-full pt-10 px-5 transition md:px-28 md:pt-24"
     >
       <div className="grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
         {/* First Grid item */}
@@ -47,7 +42,8 @@ const Hero = () => {
             </span>
           </div>
           <div className="hidden mt-20 place-self-center md:place-self-start md:block">
-            <button
+            <Link
+              to={"about"}
               type="button"
               className="border text-slate-300 rounded-xl px-5 py-3 text-sm bg-transparent 
                 focus:font-bold focus:bg-slate-300 focus:text-darkBlue 
@@ -68,7 +64,7 @@ const Hero = () => {
                   d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
         {/* Second Grid item */}
@@ -100,7 +96,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

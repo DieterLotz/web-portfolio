@@ -1,11 +1,32 @@
+import { useRef, useEffect } from "react";
+import { EXPERIENCE_ROUTE, HERO_ROUTE } from "../../helpers/router-routes";
+import { Section } from "../Section";
+
 const About = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    sectionRef?.current?.classList.remove("animate-fadeFromLeft300");
+    void sectionRef?.current?.offsetWidth;
+    sectionRef?.current?.classList.add("animate-fadeFromLeft300");
+  }, [sectionRef]);
+
   return (
-    <section
+    <Section
       id="about"
-      className="snap-always snap-start grow min-w-full pt-10 px-5 animate-fadeFromLeft300 transition md:px-28 md:pt-24"
-    >
-      About
-    </section>
+      ref={sectionRef}
+      nextRoute={EXPERIENCE_ROUTE}
+      prevRoute={HERO_ROUTE}
+      className="min-w-full pt-10 px-5 transition md:px-28 md:pt-24"
+      >
+      <div className="grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
+        {/* First Grid Item */}
+        <div>
+            <h1 className="text-4xl text-white spacing capitalize md:text-5xl">Get to know me</h1>
+        </div>
+        {/* Second Grid Item */}
+      </div>
+    </Section>
   );
 };
 

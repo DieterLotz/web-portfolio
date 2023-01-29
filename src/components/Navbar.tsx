@@ -1,62 +1,70 @@
-import { SyntheticEvent, useState } from "react";
-import { chatBubble, codeBracketIcon, codeBracketSquare, homeIcon, identificationIcon, menuCloseIcon, menuOpenIcon } from "../helpers/svg-helper";
+import { SyntheticEvent, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { ABOUT_ROUTE, CONTACT_ROUTE, EXPERIENCE_ROUTE, HERO_ROUTE } from '../helpers/router-routes'
+import {
+  chatBubble,
+  codeBracketIcon,
+  codeBracketSquare,
+  homeIcon,
+  identificationIcon,
+  menuCloseIcon,
+  menuOpenIcon,
+} from '../helpers/svg-helper'
 
 const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const location = useLocation();
 
   const onMenuIconClickHandler = (e: SyntheticEvent<HTMLButtonElement>) => {
-    setOpen((open) => !open);
-    e.currentTarget.classList.remove("animate-fade250");
-    void e.currentTarget.offsetWidth;
-    e.currentTarget.classList.add("animate-fade250");
-  };
+    setOpen((open) => !open)
+    e.currentTarget.classList.remove('animate-fade250')
+    void e.currentTarget.offsetWidth
+    e.currentTarget.classList.add('animate-fade250')
+  }
 
-  const onLinkClickHandler = (
-    route: string,
-    e: SyntheticEvent<HTMLButtonElement>
-  ) => {
-    console.log(route);
-    setOpen((open) => !open);
-  };
+  const menuIcon = open ? menuOpenIcon : menuCloseIcon
 
-  const menuIcon = open ? menuOpenIcon : menuCloseIcon;
+  const checkPathname = (subString: string) => {
+    return location.pathname.includes(subString);
+  }
 
   return (
     <>
       <header>
         <div className="relative flex justify-between items-center px-10 bg-darkBlue w-full h-20 shadow-md md:px-24">
-          <button
+          <Link
             className="flex gap-2 items-center w-52 h-6 text-slate-300 text-base line hover:cursor-pointer"
-            onClick={(e) => onLinkClickHandler("/", e)}
+            to={HERO_ROUTE}
+            onClick={() => setOpen(false)}
           >
             <pre>Dieter Lötz</pre>
             {codeBracketIcon}
-          </button>
+          </Link>
           <nav className="hidden md:flex md:justify-end md:items-center md:gap-7 md:w-full">
-            <button
-              className="text-base text-slate-300 hover:text-white focus:underline hover:underline hover:underline-offset-4"
-              onClick={(e) => onLinkClickHandler("/", e)}
+            <Link
+              className={`text-base text-slate-300 hover:text-white ${checkPathname(HERO_ROUTE) ? "underline" : ""} underline-offset-4 focus:underline hover:underline`}
+              to={HERO_ROUTE}
             >
               Home
-            </button>
-            <button
+            </Link>
+            <Link
               className="text-base text-slate-300 hover:text-white focus:underline hover:underline hover:underline-offset-4"
-              onClick={(e) => onLinkClickHandler("/about", e)}
+              to={ABOUT_ROUTE}
             >
               About me
-            </button>
-            <button
+            </Link>
+            <Link
               className="text-base text-slate-300 hover:text-white focus:underline hover:underline hover:underline-offset-4"
-              onClick={(e) => onLinkClickHandler("/experience", e)}
+              to={EXPERIENCE_ROUTE}
             >
               Experience
-            </button>
-            <button
+            </Link>
+            <Link
               className="text-base text-slate-300 hover:text-white focus:underline hover:underline hover:underline-offset-4"
-              onClick={(e) => onLinkClickHandler("/contact", e)}
+              to={CONTACT_ROUTE}
             >
               Contact
-            </button>
+            </Link>
           </nav>
 
           {/* Mobile menu */}
@@ -64,34 +72,38 @@ const Navbar = () => {
             {open && (
               <nav className="absolute -bottom-48 right-3 w-1/2 h-auto rounded-lg shadow-lg bg-darkBlue p-6 animate-fade250">
                 <div className="flex flex-col gap-3 w-full pl-3">
-                  <button
+                  <Link
                     className="flex gap-3 items-center justify-jusify text-base text-white hover:underline focus:underline underline-offset-4"
-                    onClick={(e) => onLinkClickHandler("/", e)}
+                    to={HERO_ROUTE}
+                    onClick={() => setOpen(false)}
                   >
                     {homeIcon}
                     Home
-                  </button>
-                  <button
+                  </Link>
+                  <Link
                     className="flex gap-3 items-center justify-jusify text-base text-white hover:underline focus:underline underline-offset-4"
-                    onClick={(e) => onLinkClickHandler("/about", e)}
+                    to={ABOUT_ROUTE}
+                    onClick={() => setOpen(false)}
                   >
                     {identificationIcon}
                     About me
-                  </button>
-                  <button
+                  </Link>
+                  <Link
                     className="flex gap-3 items-center justify-jusify text-base text-white hover:underline focus:underline underline-offset-4"
-                    onClick={(e) => onLinkClickHandler("/experience", e)}
+                    to={EXPERIENCE_ROUTE}
+                    onClick={() => setOpen(false)}
                   >
                     {codeBracketSquare}
                     Experience
-                  </button>
-                  <button
+                  </Link>
+                  <Link
                     className="flex gap-3 items-center justify-jusify text-base text-white hover:underline focus:underline underline-offset-4"
-                    onClick={(e) => onLinkClickHandler("/contact", e)}
+                    to={CONTACT_ROUTE}
+                    onClick={() => setOpen(false)}
                   >
                     {chatBubble}
                     Contact
-                  </button>
+                  </Link>
                 </div>
               </nav>
             )}
@@ -102,7 +114,7 @@ const Navbar = () => {
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
