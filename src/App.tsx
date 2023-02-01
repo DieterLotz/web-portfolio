@@ -5,7 +5,7 @@ function App() {
   return (
     <main className="flex flex-col min-w-full min-h-full bg-veryDarkBlue">
       <Navbar />
-      <div className="flex grow overflow-x-scroll min-w-full">
+      <div className="flex grow min-w-full min-h-full">
        <Outlet/>
       </div>
       <Footer />
