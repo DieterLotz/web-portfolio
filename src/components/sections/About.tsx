@@ -17,12 +17,11 @@ const About = () => {
       ref={sectionRef}
       nextRoute={EXPERIENCE_ROUTE}
       prevRoute={HERO_ROUTE}
-      className="min-w-full min-h-full pt-10 px-5 transition md:px-28 md:pt-24"
       >
       <div className="grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
         {/* First Grid Item */}
         <div>
-            <h1 className="text-3xl text-white spacing capitalize md:text-5xl">Get to know me</h1>
+            <h1 className="text-3xl text-white spacing capitalize md:text-5xl">About me</h1>
         </div>
         {/* Second Grid Item */}
       </div>

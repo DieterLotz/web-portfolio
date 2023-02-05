@@ -19,35 +19,31 @@ const Hero = () => {
       id="hero"
       nextRoute={ABOUT_ROUTE}
       prevRoute={HERO_ROUTE}
-      className="grow min-w-full min-h-full pt-10 px-5 transition md:px-28 md:pt-24"
     >
-      <div className="grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
+      <div className="min-h-3/4 grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
         {/* First Grid item */}
         <div>
-          <h1 className="text-3xl text-white spacing md:text-6xl">
-            I'm a{" "}
-            <span className="bg-slate-800 max-w-fit leading-snug">
-              Developer
+          <h1 className="text-4xl text-slate-300 md:text-5xl">
+            Hi, I'm{" "}
+            <span className="bg-slate-800 max-w-fit leading-snug whitespace-nowrap">
+              Dieter Lötz
             </span>
           </h1>
           <div className="flex gap-3 mt-2 text-slate-400 text-xs">
             {locationIcon}
             <span>Cape Town, South Africa | 23°C Sunny</span>
           </div>
-          <div className="flex flex-col mt-6 text-white text-sm md:text-base">
-            <span className="leading-10">Hello, My name is Dieter Lötz.</span>
+          <div className="flex flex-col mt-6 text-slate-300 text-sm md:text-base md:mt-14">
             <span className="leading-8">
-              I'm a full-stack software developer with a passion for quality
-              software and solutions.
+              I'm a full-stack software engineer with over 3 years of experience in developing, maintaining and deploying software-solutions within the FinTech industry. 
             </span>
           </div>
           <div className="hidden mt-20 place-self-center md:place-self-start md:block">
             <Link
               to={ABOUT_ROUTE}
-              type="button"
               className="border text-slate-300 rounded-xl px-5 py-3 text-sm bg-transparent 
-                focus:font-bold focus:bg-slate-300 focus:text-darkBlue 
-                hover:animate-fade150 hover:font-bold hover:bg-slate-300 hover:text-darkBlue md:text-base"
+                focus:font-bold focus:bg-slate-300 focus:text-veryDarkPrimaryAccent
+                hover:animate-fade150 hover:font-bold hover:bg-slate-300 hover:text-veryDarkPrimaryAccent md:text-base"
             >
               Learn more about me
               {rightArrow}
@@ -59,10 +55,10 @@ const Hero = () => {
           <div className="w-60 h-60 rounded-full bg-slate-300 bg-hero-pattern bg-bottom bg-contain bg-no-repeat bg-origin-border"></div>
         </div>
         <div className="place-self-center md:place-self-start md:hidden">
-          <button
-            type="button"
+          <Link
+          to={ABOUT_ROUTE}
             className="border text-slate-300 rounded-xl px-5 py-3 text-sm bg-transparent
-                focus:font-bold focus:bg-slate-300 focus:text-darkBlue focus:animate-fade250
+                focus:font-bold focus:bg-slate-300 focus:text-darkPrimaryAccent focus:animate-fade250
                 md:text-base"
           >
             Learn more about me
@@ -80,7 +76,7 @@ const Hero = () => {
                 d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </Section>

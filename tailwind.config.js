@@ -15,24 +15,14 @@ module.exports = {
         'xl' : '1200px',
       },
       colors : {
-        // Cascading blues #1
-        // 'veryDarkBlue' : '#0A2647',
-        // 'darkBlue' : '#144272',
-        // 'lightBlue' : '#205295',
-        // 'lighterBlue' : '2C74B3',
-        // Cascading blues #2
-        'veryDarkBlue' : '#0b132b',
-        'darkBlue' : '#1c2541',
-        'grayishBlue' : '#3a506b',
-        'lightBlue' : '#6fffe9'
-        // Dark theme with Purple
-        // 'veryDarkBlue' : '#03001C',
-        // 'purple' : '#301E67',
-        // 'lightBlue' : '#5B8FB9',
-        // 'lighterBlue' : '#B6EADA',
+        'veryDarkPrimaryAccent' : '#0b132b',
+        'darkPrimaryAccent' : '#1c2541',
+        'secondaryAccent' : '#3a506b',
+        'lightSecondaryAccent' : '#6fffe9'
       },
       backgroundImage : {
-        'hero-pattern' : "url(/src/assets/hero.png)"
+        'hero-pattern' : "url(/src/assets/hero.png)",
+        'radial-dots' : "radial-gradient(#49494a 0.8px, #0b132b 0.8px)",
       },
       keyframes : {
         fade : {

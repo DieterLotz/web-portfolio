@@ -17,7 +17,6 @@ const Experience = () => {
       ref={sectionRef}
       nextRoute={CONTACT_ROUTE}
       prevRoute={ABOUT_ROUTE}
-      className="min-w-full min-h-full pt-10 px-5 transition md:px-28 md:pt-24"
     >
       <h1 className="text-3xl text-white spacing capitalize md:text-5xl">
         Professional Experience
