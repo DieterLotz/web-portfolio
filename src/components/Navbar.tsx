@@ -1,4 +1,4 @@
-import { SyntheticEvent, useState } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
   ABOUT_ROUTE,
@@ -20,7 +20,7 @@ const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false)
   const location = useLocation()
 
-  const onMenuIconClickHandler = (e: SyntheticEvent<HTMLButtonElement>) => {
+  const onMenuIconClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     setOpen((open) => !open)
     e.currentTarget.classList.remove('animate-fade250')
     void e.currentTarget.offsetWidth

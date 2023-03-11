@@ -26,7 +26,7 @@ const Hero = () => {
           <h1 className="text-sm text-lightSecondaryAccent md:text-base">
             Hi, my name is
           </h1>
-          <h2 className="max-w-fit mt-1 text-slate-200 text-4xl font-bold leading-relaxed tracking-wide whitespace-nowrap md:text-5xl">
+          <h2 className="max-w-fit mt-1 text-3xl text-slate-200 font-bold leading-relaxed tracking-wide whitespace-nowrap md:text-5xl">
             Dieter Lötz.
           </h2>
           {/* <div className="flex gap-3 mt-2 text-slate-400 text-xs">
