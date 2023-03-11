@@ -1,19 +1,24 @@
 import { SyntheticEvent, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ABOUT_ROUTE, CONTACT_ROUTE, EXPERIENCE_ROUTE, HERO_ROUTE } from '../helpers/router-routes'
+import {
+  ABOUT_ROUTE,
+  CONTACT_ROUTE,
+  EXPERIENCE_ROUTE,
+  HERO_ROUTE,
+} from '../helpers/router-routes'
 import {
   chatBubble,
-  codeBracketIcon,
   codeBracketSquare,
   homeIcon,
   identificationIcon,
   menuCloseIcon,
   menuOpenIcon,
 } from '../helpers/svg-helper'
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const location = useLocation();
+  const [open, setOpen] = useState<boolean>(false)
+  const location = useLocation()
 
   const onMenuIconClickHandler = (e: SyntheticEvent<HTMLButtonElement>) => {
     setOpen((open) => !open)
@@ -22,7 +27,7 @@ const Navbar = () => {
     e.currentTarget.classList.add('animate-fade250')
   }
 
-  const menuIcon = open ? menuOpenIcon : menuCloseIcon;
+  const menuIcon = open ? menuOpenIcon : menuCloseIcon
 
   return (
     <>
@@ -33,30 +38,37 @@ const Navbar = () => {
             to={HERO_ROUTE}
             onClick={() => setOpen(false)}
           >
-            <pre>Dieter Lötz</pre>
-            {codeBracketIcon}
+            <img src={logo} alt="logo" className="w-10 h-10" />
           </Link>
           <nav className="hidden md:flex md:justify-end md:items-center md:gap-7 md:w-full">
             <Link
-              className={`text-base text-slate-300 hover:text-white ${location.pathname.endsWith(HERO_ROUTE) ? "underline" : ""} underline-offset-4 hover:underline`}
+              className={`text-base text-slate-300 hover:text-white ${
+                location.pathname.endsWith(HERO_ROUTE) ? 'underline' : ''
+              } decoration-lightSecondaryAccent underline-offset-4 hover:underline`}
               to={HERO_ROUTE}
             >
               Home
             </Link>
             <Link
-              className={`text-base text-slate-300 hover:text-white ${location.pathname.endsWith(ABOUT_ROUTE) ? "underline" : ""} underline-offset-4 hover:underline`}
+              className={`text-base text-slate-300 hover:text-white ${
+                location.pathname.endsWith(ABOUT_ROUTE) ? 'underline' : ''
+              } decoration-lightSecondaryAccent underline-offset-4 hover:underline`}
               to={ABOUT_ROUTE}
             >
               About me
             </Link>
             <Link
-              className={`text-base text-slate-300 hover:text-white ${location.pathname.endsWith(EXPERIENCE_ROUTE)? "underline" : ""} underline-offset-4 hover:underline`}
+              className={`text-base text-slate-300 hover:text-white ${
+                location.pathname.endsWith(EXPERIENCE_ROUTE) ? 'underline' : ''
+              } decoration-lightSecondaryAccent underline-offset-4 hover:underline`}
               to={EXPERIENCE_ROUTE}
             >
               Experience
             </Link>
             <Link
-              className={`text-base text-slate-300 hover:text-white ${location.pathname.endsWith(CONTACT_ROUTE) ? "underline" : ""} underline-offset-4 hover:underline`}
+              className={`text-base text-slate-300 hover:text-white ${
+                location.pathname.endsWith(CONTACT_ROUTE) ? 'underline' : ''
+              } decoration-lightSecondaryAccent underline-offset-4 hover:underline`}
               to={CONTACT_ROUTE}
             >
               Contact

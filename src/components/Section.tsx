@@ -51,7 +51,7 @@ export const Section = React.forwardRef<HTMLElement, Props>((props, ref) => {
     <section
       id={props.id}
       ref={ref}
-      className={props.className || "min-w-full min-h-full pt-10 px-5 transition md:px-36 md:flex md:items-center"}
+      className={props.className || "min-w-full min-h-full py-10 px-5 transition md:px-36 md:flex md:items-center"}
       onTouchStart={(e) => onTouchStartEventHandler(e)}
       onTouchEnd={(e) => onTouchEndEventHandler(e)}
       onWheel={(e) => onScrollEventHandler(e)}
