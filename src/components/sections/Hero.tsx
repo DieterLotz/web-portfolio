@@ -35,10 +35,35 @@ const Hero = () => {
           </div> */}
           <div className="flex flex-col mt-6 text-slate-300 text-sm md:text-base md:mt-14">
             <span className="leading-8">
-              I'm a full-stack software engineer with over 3 years of experience
-              in developing, maintaining and deploying software-solutions within
-              the FinTech industry.
+              I'm a{' '}
+              <span className="text-lightSecondaryAccent">
+                full-stack software engineer
+              </span>{' '}
+              with over 3 years of experience in developing, maintaining and
+              deploying software-solutions within the Fintech industry. 👾
+              <br />
+              <br /> In my spare time, I enjoy watching podcasts on various
+              topics that interest me, playing a few riffs on my ukulele, and
+              going to the gym.
+              <br />
+              <br />
+              My super power:
             </span>
+            <div className="bg-[#252525] w-3/4 self-center rounded-md p-2">
+              {'const coffeeToCode = (coffee) => {'}
+              <br />
+              {'  if(!coffee)'} <br />
+              {'    throw new Error("Please make another cup of coffee!")'}{' '}
+              <br />
+              {'  return convert(coffee)'}
+              <br />
+              {'}'}
+              <br />
+              {''}
+              <br />
+              {'console.log(coffeeToCode(☕️);'}
+              <br />
+            </div>
           </div>
           <div className="hidden mt-20 place-self-center md:place-self-start md:block">
             <Link
