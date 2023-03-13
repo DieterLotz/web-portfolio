@@ -11,7 +11,7 @@ export const homeIcon = (
       clipRule="evenodd"
     />
   </svg>
-)
+);
 
 export const menuOpenIcon = (
   <svg
@@ -29,7 +29,7 @@ export const menuOpenIcon = (
       d="M6 18L18 6M6 6l12 12"
     />
   </svg>
-)
+);
 
 export const menuCloseIcon = (
   <svg
@@ -47,7 +47,7 @@ export const menuCloseIcon = (
       d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
     />
   </svg>
-)
+);
 
 export const codeBracketIcon = (
   <svg
@@ -64,7 +64,7 @@ export const codeBracketIcon = (
       d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
     />
   </svg>
-)
+);
 
 export const codeBracketSquare = (
   <svg
@@ -79,7 +79,7 @@ export const codeBracketSquare = (
       clipRule="evenodd"
     />
   </svg>
-)
+);
 
 export const chatBubble = (
   <svg
@@ -91,7 +91,7 @@ export const chatBubble = (
     <path d="M3.505 2.365A41.369 41.369 0 019 2c1.863 0 3.697.124 5.495.365 1.247.167 2.18 1.108 2.435 2.268a4.45 4.45 0 00-.577-.069 43.141 43.141 0 00-4.706 0C9.229 4.696 7.5 6.727 7.5 8.998v2.24c0 1.413.67 2.735 1.76 3.562l-2.98 2.98A.75.75 0 015 17.25v-3.443c-.501-.048-1-.106-1.495-.172C2.033 13.438 1 12.162 1 10.72V5.28c0-1.441 1.033-2.717 2.505-2.914z" />
     <path d="M14 6c-.762 0-1.52.02-2.271.062C10.157 6.148 9 7.472 9 8.998v2.24c0 1.519 1.147 2.839 2.71 2.935.214.013.428.024.642.034.2.009.385.09.518.224l2.35 2.35a.75.75 0 001.28-.531v-2.07c1.453-.195 2.5-1.463 2.5-2.915V8.998c0-1.526-1.157-2.85-2.729-2.936A41.645 41.645 0 0014 6z" />
   </svg>
-)
+);
 
 export const identificationIcon = (
   <svg
@@ -106,7 +106,7 @@ export const identificationIcon = (
       clipRule="evenodd"
     />
   </svg>
-)
+);
 
 export const locationIcon = (
   <svg
@@ -128,7 +128,7 @@ export const locationIcon = (
       d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
     />
   </svg>
-)
+);
 
 export const rightArrow = (
   <svg
@@ -145,14 +145,14 @@ export const rightArrow = (
       d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
     />
   </svg>
-)
+);
 
 export const chevronRight = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     fill="currentColor"
-    className="w-5 h-5"
+    className="w-16 h-16"
   >
     <path
       fillRule="evenodd"
@@ -160,7 +160,22 @@ export const chevronRight = (
       clipRule="evenodd"
     />
   </svg>
-)
+);
+
+export const chevronLeft = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    className="w-16 h-16"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+      clip-rule="evenodd"
+    />
+  </svg>
+);
 
 export const illustrationDeveloper = (
   <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -324,7 +339,7 @@ export const illustrationDeveloper = (
       </linearGradient>
     </defs>
   </svg>
-)
+);
 
 export const developerWithLaptop = (
   <svg viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -612,4 +627,4 @@ export const developerWithLaptop = (
       </clipPath>
     </defs>
   </svg>
-)
+);

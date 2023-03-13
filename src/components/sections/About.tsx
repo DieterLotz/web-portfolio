@@ -38,7 +38,7 @@ const About = () => {
 
             <span className="mt-4 leading-8">
               Since then, my passion for software development has grown
-              exponentially, and I can honstely say that I love what I do for a
+              exponentially, and I can honestly say that I love what I do for a
               living!
             </span>
 
