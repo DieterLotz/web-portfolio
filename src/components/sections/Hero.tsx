@@ -1,17 +1,17 @@
-import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
-import { ABOUT_ROUTE, HERO_ROUTE } from '../../helpers/router-routes'
-import { illustrationDeveloper, rightArrow } from '../../helpers/svg-helper'
-import { Section } from '../Section'
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { ABOUT_ROUTE, HERO_ROUTE } from "../../helpers/router-routes";
+import { illustrationDeveloper, rightArrow } from "../../helpers/svg-helper";
+import { Section } from "../Section";
 
 const Hero = () => {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    sectionRef?.current?.classList.remove('animate-fadeFromLeft300')
-    void sectionRef?.current?.offsetWidth
-    sectionRef?.current?.classList.add('animate-fadeFromLeft300')
-  }, [sectionRef])
+    sectionRef?.current?.classList.remove("animate-fadeFromLeft300");
+    void sectionRef?.current?.offsetWidth;
+    sectionRef?.current?.classList.add("animate-fadeFromLeft300");
+  }, [sectionRef]);
 
   return (
     <Section
@@ -20,7 +20,7 @@ const Hero = () => {
       nextRoute={ABOUT_ROUTE}
       prevRoute={HERO_ROUTE}
     >
-      <div className="min-h-3/4 grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
+      <div className="min-h-full grid grid-col-1 gap-12 md:grid-cols-2 md:gap-12">
         {/* First Grid item */}
         <div>
           <h1 className="text-sm text-lightSecondaryAccent md:text-base">
@@ -29,41 +29,25 @@ const Hero = () => {
           <h2 className="max-w-fit mt-1 text-3xl text-slate-200 font-bold leading-relaxed tracking-wide whitespace-nowrap md:text-5xl">
             Dieter Lötz.
           </h2>
-          {/* <div className="flex gap-3 mt-2 text-slate-400 text-xs">
-            {locationIcon}
-            <span>Cape Town, South Africa | 23°C Sunny</span>
-          </div> */}
           <div className="flex flex-col mt-6 text-slate-300 text-sm md:text-base md:mt-14">
             <span className="leading-8">
-              I'm a{' '}
-              <span className="text-lightSecondaryAccent">
+              I'm a{" "}
+              <span className="text-lightSecondaryAccent underline underline-offset-4">
                 full-stack software engineer
-              </span>{' '}
-              with over 3 years of experience in developing, maintaining and
-              deploying software-solutions within the Fintech industry. 👾
+              </span>{" "}
+              with over 3 years of industry experience in developing,
+              maintaining and deploying enterprise level software-solutions.
               <br />
-              <br /> In my spare time, I enjoy watching podcasts on various
-              topics that interest me, playing a few riffs on my ukulele, and
-              going to the gym.
-              <br />
-              <br />
-              My super power:
+              <br />I am passionate about creating{" "}
+              <span className="text-lightSecondaryAccent underline underline-offset-4">
+                awesome websites
+              </span>{" "}
+              and the intricate workflows in the{" "}
+              <span className="text-lightSecondaryAccent underline underline-offset-4">
+                backend
+              </span>
+              .
             </span>
-            <div className="bg-[#252525] w-3/4 self-center rounded-md p-2">
-              {'const coffeeToCode = (coffee) => {'}
-              <br />
-              {'  if(!coffee)'} <br />
-              {'    throw new Error("Please make another cup of coffee!")'}{' '}
-              <br />
-              {'  return convert(coffee)'}
-              <br />
-              {'}'}
-              <br />
-              {''}
-              <br />
-              {'console.log(coffeeToCode(☕️);'}
-              <br />
-            </div>
           </div>
           <div className="hidden mt-20 place-self-center md:place-self-start md:block">
             <Link
@@ -94,7 +78,7 @@ const Hero = () => {
         </div>
       </div>
     </Section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
